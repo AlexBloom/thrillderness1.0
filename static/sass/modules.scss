@@ -1,0 +1,203 @@
+//Modules
+
+/* 
+//////////////////////////////////////////////////////////////////////////////// 04 Global Functions
+*/
+/* ======================================================== LINKS / BUTTONS  */
+/* ======================================================== OPEN / CLOSE */
+
+
+/* =========================================================================================== Site Header */
+#site-header{
+
+	#brand{
+		
+	}
+	.site-title{
+		
+	}
+	.site-description{
+		
+	}
+	#site-nav{
+		
+	}
+}
+
+/* =========================================================================================== Site Layout */
+.main-fluid{
+	
+}
+
+.one-column{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	text-indent:none;
+	text-align:left;	
+	>li{
+		float:left;
+		width:90%;
+		padding:1em 5%;
+	}
+}
+.two-columns{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	text-indent:none;
+	text-align:left;	
+	>li{
+		float:left;
+		width:90%;
+		padding:1em 5%;
+	}
+	
+	@media screen and (min-width:(em(800))){
+		>li{
+			width:45%;
+			padding:1em 5% 1em 0;
+		}
+	}
+}
+.three-columns{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	text-indent:none;
+	text-align:center;	
+	>li{
+		float:left;
+		width:90%;
+		padding:1em 5%;
+	}
+	
+	@media screen and (min-width:(em(800))){
+		>li:first-child, >li:last-child{
+			width:29%;
+			padding:1em 4% 1em 0;
+		}
+		>li{
+			width:30%;
+			padding:1em 4% 1em 0;
+		}
+	}
+}
+
+
+
+/* =========================================================================================== Site Footer */
+#site-footer{
+
+}
+
+
+
+
+
+
+/* ======================================================== Articles / Posts */
+
+article{
+	position:relative;
+	width:100%;
+	text-align:left;
+	width:80%;
+	margin:3em auto;
+	max-width:50em;
+	header, footer{
+		width:90%;
+		padding:2em 5%;
+		text-align:center;
+	}
+	h3{
+		border-top:1px solid;
+		padding-top:1em;
+	}
+	aside{
+		font-size:.85em;
+		font-style:italic;
+		padding:1em 0;
+		clear:both;
+		
+		img{
+			float:left;
+			width:8em;
+			margin:0 1em;
+			border:2px solid $white;
+			@include perfect-circle;
+			
+			@media screen and (min-width:(em(1300))){
+				width:100%;
+				margin:0 0 2em 0;
+			}
+		}
+		
+		@media screen and (min-width:(em(1300))){
+			position:absolute;
+			width:30%;
+			right:-35%;
+		}
+	}
+	.speaker{
+		display: block;
+		margin-left: -4em;
+		position: absolute;
+		opacity:0.5;
+		text-transform:uppercase;
+		font-size:.8em;
+		
+	}
+}
+
+
+
+// Posts (articles)
+.post{
+	.title{}
+	.post-meta{}
+	.the-content{}
+	.meta{
+		.category{}
+		.tags{}
+	}
+}
+
+// Pagination
+#pagination{	
+	.past-page{}
+	.next-page{}
+}
+
+
+
+
+
+
+// Repeat Modules
+
+//Swipe Classes
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  
+  :last-child{
+	 // z-index:5000;
+  }
+  
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+
+
+
+

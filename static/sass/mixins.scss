@@ -1,0 +1,186 @@
+/* Table of Contents
+// 01 Mixins
+// 02 Typography
+// 03 Helper Classes
+// 04 Global Functions
+// 05 Modules
+// 06 Layout Classes
+// 07 Custom / One Off / Art-Directed Classes
+// 08 Print Styles
+*/
+
+/* 
+//////////////////////////////////////////////////////////////////////////////// 01 MIXINS 
+*/
+
+/* COLORS ======= */
+$text-color: #4e4e4e;
+
+//Neutrals
+$black: #000;
+$dark-grey: #222222;
+$medium-grey: #888888;
+$light-grey: #EEEEEE;
+$white: #FFF;
+
+//Action Colors
+$action-color:rgba(226,035,026,1);
+
+
+/* EMS ======= */
+@function em($target, $context: 15) {
+    @return ($target / $context) * 1em;
+}
+
+@mixin full-bleed-background{
+background-position:50% 0;
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+@mixin quarter-second-transition{
+-webkit-transition-duration: .25s;
+-moz-transition-duration: .25s;
+-ms-transition-duration: .25s;
+-o-transition-duration: .25s;
+transition-duration: .25s;
+}
+
+@mixin half-second-transition{
+-webkit-transition-duration: .5s;
+-moz-transition-duration: .5s;
+-ms-transition-duration: .5s;
+-o-transition-duration: .5s;
+transition-duration: .5s;
+}
+
+@mixin one-em-border-radius{
+-webkit-border-radius: 1em;
+-moz-border-radius: 1em;
+-ms-border-radius: 1em;
+-o-border-radius: 1em;
+border-radius:1em;
+}
+
+@mixin perfect-circle{
+	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	-ms-border-radius: 50em;
+	-o-border-radius: 50em;
+	border-radius:50em;
+}
+
+@mixin drop-shadow{
+-webkit-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+-moz-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+-ms-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+-o-box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
+}
+
+
+
+
+
+//MENU ICON
+
+$button-size : 2em; 
+//common to all three-liners
+.lines-button {
+  padding: $button-size/4 $button-size/4;
+  transition: .1s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: $button-size/8;
+  &:hover {
+    //opacity: 1;
+  }
+  &:active {
+    transition: 0;
+  }
+}
+//common to all three-liners
+@mixin line {
+  display: inline-block;
+  width: $button-size;
+  height: $button-size/8;
+  background-color: $red;
+  border-radius: $button-size/12; 
+  transition: .1s;
+}
+//common to all three-liners
+.lines {
+  @include line;
+  position: relative; 
+  &:before, &:after {
+   @include line;
+    position: absolute;
+    left:0;
+    content: '';
+    -webkit-transform-origin: $button-size/14 center;
+            transform-origin: $button-size/14 center;
+  }
+  &:before { 
+    top: $button-size/4; 
+	width:$button-size/1.25; 
+  }
+  &:after { 
+    top: -$button-size/4;
+	width:$button-size/1.25;  
+  }
+}
+//common to all three-liners
+.lines-button:hover {
+	
+  .lines {
+	  
+    &:before { 
+      //top: $button-size/3.5;
+	  width:$button-size; 
+    }
+    &:after { 
+      //top: -$button-size/3.5;
+	  width:$button-size; 
+    }
+  }
+}
+.lines-button.close {
+  -webkit-transform: scale3d(.8,.8,.8);
+          transform: scale3d(.8,.8,.8);
+}*
+//x2 transitions
+.lines-button.x2{
+    .lines{
+      transition: background .1s .1s ease;
+
+      &:before, &:after{
+        //set transform origin
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+        transition: top .1s .2s ease, -webkit-transform .1s ease;
+        transition: top .1s .2s ease, transform .1s ease;
+      }
+    }
+}
+.lines-button.x2.close{
+  .lines {
+    transition: background .1s 0s ease;
+    background: transparent;
+
+    &:before, &:after{
+      transition: top .1s ease, -webkit-transform .1s .2s ease;//delay the formation of the x till the minus is formed  
+      transition: top .1s ease, transform .1s .2s ease;//delay the formation of the x till the minus is formed  
+      top:0;
+      width: $button-size;
+    }
+    &:before{
+      -webkit-transform: rotate3d(0,0,1,45deg); 
+              transform: rotate3d(0,0,1,45deg); 
+    }
+    &:after{
+      -webkit-transform: rotate3d(0,0,1,-45deg); 
+              transform: rotate3d(0,0,1,-45deg); 
+    }
+  }
+}
+//END MENU ICON
