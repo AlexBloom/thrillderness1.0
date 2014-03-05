@@ -11,7 +11,9 @@
 #site-header{
 
 	#brand{
-		
+		h1{
+			font-size:1em;
+		}
 	}
 	.site-title{
 		
@@ -20,7 +22,17 @@
 		
 	}
 	#site-nav{
-		
+		width:90%;
+		padding:1em 10%;
+	}
+	#menu-categories{
+		list-style-type:none;
+		li{ 
+			float:left;
+			width:29%;
+			padding:.5em 2%;
+			text-align:center;
+		}
 	}
 }
 
@@ -29,7 +41,7 @@
 	
 }
 
-.one-column{
+.1-col{
 	list-style-type:none;
 	margin:0;
 	padding:0;
@@ -41,7 +53,7 @@
 		padding:1em 5%;
 	}
 }
-.two-columns{
+.2-col{
 	list-style-type:none;
 	margin:0;
 	padding:0;
@@ -60,7 +72,7 @@
 		}
 	}
 }
-.three-columns{
+.3-col{
 	list-style-type:none;
 	margin:0;
 	padding:0;
@@ -83,6 +95,9 @@
 		}
 	}
 }
+.4-col{}
+.5-col{}
+.6-col{}
 
 
 

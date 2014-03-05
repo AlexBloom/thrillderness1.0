@@ -21,6 +21,8 @@ register_nav_menus(
 		'primary'	=>	__( 'Primary Menu', 'naked' ), // Register the Primary menu
 		// Copy and paste the line above right here if you want to make another menu, 
 		// just change the 'primary' to another name
+		'page'	=>	__( 'Page Menu', 'naked' ),
+		'tags'	=>	__( 'Tags Menu', 'naked' ),
 	)
 );
 

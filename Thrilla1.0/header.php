@@ -51,10 +51,21 @@
 			</h1>
 
 		</div><!-- #brand -->
-		
-		<nav role="navigation" id="site-nav">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
+		<div id="search">
+			<?php get_search_form(); ?>
+		</div>
+		<nav role="navigation" id="page-nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'page' ) ); // Display the user-defined menu in Appearance > Menus ?>
 		</nav><!-- #site-nav -->
+		
+		<div id="site-nav" class="overlay">
+			<nav role="navigation"  class="clearfix">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
+			</nav><!-- #site-nav -->
+			<nav role="navigation" class="clearfix">
+				<?php wp_nav_menu( array( 'theme_location' => 'tags' ) ); // Display the user-defined menu in Appearance > Menus ?>
+			</nav><!-- #site-nav -->
+		</div>
 		
 </header><!-- #site-header -->
 
