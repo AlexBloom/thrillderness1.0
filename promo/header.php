@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <head>
 
-
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width = device-width, initial-scale=1, maximum-scale=1, user-scalable = no">
 <meta name="author" content="Thrillderness">
 <meta name="description" content="A home for endangered knowledge.">
-<meta name="keywords" content="Thrillderness, Education, ">
+<meta name="keywords" content="Thrillderness, Outdoor Education, Self Reliance, DIY, Self Sufficiency, Survival, Sustainability">
 
  <link rel="stylesheet" href="css/normalize.min.css">
  <link rel="stylesheet" href="css/base.css">
@@ -19,19 +18,15 @@
 </head>
 
 <body id="body">
-
-
-
+		
+	<header id="site-header">
 	
+		<a id="logo" href="#"> Thrillderness </a>
 	
-<header id="site-header">
-	
-	<a id="logo" href="#"> Thrillderness </a>
-	
-</header>
+	</header>
 
 
-<section id="main" class="clearfix">
+	<section id="main" class="clearfix">
 	
 
 	

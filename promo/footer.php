@@ -4,12 +4,22 @@
 			
 	
 			
-	<footer id="site-footer" class="clearfix">
-		
+
+	</section><!-- / end page container, begun in the header -->
 	
+	<footer id="site-footer">	
+		<nav>
+			<ul>
+				<li> <a href="http://instagram.com/thrillderness"target=_blank> <span class="icon-instagram"> </span> </a> </li>
+				<li> <a href="http://tumblr.com/thrillderness"target=_blank> <span class="icon-tumblr"> </span> </a> </li>
+				<li> <a href="http://twitter.com/thrillderness"target=_blank> <span class="icon-twitter"> </span> </a> </li>
+			</ul>
+		</nav>
+		<div id="copyright"> 
+			<p>&copy; Thrillderness 2014-2015</p> 
+		</div>	
 	</footer>
 	
-	</section><!-- / end page container, begun in the header -->
 	
 	
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
