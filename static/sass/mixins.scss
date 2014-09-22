@@ -14,17 +14,34 @@
 */
 
 /* COLORS ======= */
-$text-color: #4e4e4e;
+$text-color: #333;
 
 //Neutrals
 $black: #000;
 $dark-grey: #222222;
 $medium-grey: #888888;
+$medium-grey-alt:#999999;
 $light-grey: #EEEEEE;
 $white: #FFF;
+$translucent-white:rgba(255,255,255,.9);
+$translucent-black:rgba(0,0,0,.9);
+$translucent-action-color:rgba(28,84,77,.9);
+
+$offwhite:rgb(240,233,209);
+$red:#ff4000;
+$forest:rgb(24,57,19);
+$cerulean:rgb(28,84,77);
+$aqua:rgb(45,134,116);
+$sky:rgb(194,224,235);
+$old-green:rgba(28,84,77,1);
 
 //Action Colors
-$action-color:rgba(226,035,026,1);
+$action-color:#ff4000;
+/*rgb(45,134,116) old forest green*/
+
+
+$safetyorange:#ff540d;
+
 
 
 /* EMS ======= */
@@ -54,6 +71,15 @@ transition-duration: .25s;
 transition-duration: .5s;
 }
 
+@mixin half-em-border-radius{
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+-ms-border-radius: .5em;
+-o-border-radius: .5em;
+border-radius:.5em;
+}
+
+
 @mixin one-em-border-radius{
 -webkit-border-radius: 1em;
 -moz-border-radius: 1em;
@@ -78,109 +104,32 @@ border-radius:1em;
 box-shadow: 0 0.1em 0.4em rgba(0,0,0,0.5); //, 0 0.1em 0.4em $black;
 }
 
-
-
-
-
-//MENU ICON
-
-$button-size : 2em; 
-//common to all three-liners
-.lines-button {
-  padding: $button-size/4 $button-size/4;
-  transition: .1s;
-  cursor: pointer;
-  user-select: none;
-  border-radius: $button-size/8;
-  &:hover {
-    //opacity: 1;
-  }
-  &:active {
-    transition: 0;
-  }
-}
-//common to all three-liners
-@mixin line {
-  display: inline-block;
-  width: $button-size;
-  height: $button-size/8;
-  background-color: $red;
-  border-radius: $button-size/12; 
-  transition: .1s;
-}
-//common to all three-liners
-.lines {
-  @include line;
-  position: relative; 
-  &:before, &:after {
-   @include line;
-    position: absolute;
-    left:0;
-    content: '';
-    -webkit-transform-origin: $button-size/14 center;
-            transform-origin: $button-size/14 center;
-  }
-  &:before { 
-    top: $button-size/4; 
-	width:$button-size/1.25; 
-  }
-  &:after { 
-    top: -$button-size/4;
-	width:$button-size/1.25;  
-  }
-}
-//common to all three-liners
-.lines-button:hover {
+@mixin triangle-up{	
+	/*Up pointing*/
+	.triangle-up {
+		display:block;
+	    width: 13.4%;
+	    height: 0;    
+	    padding-left:13.4%;
+	    padding-bottom: 13.4%;
+	    overflow: hidden;
+	}
+	.triangle-up:after {
+	    content: "";
+	    display: block;
+	    width: 0;
+	    height: 0;
+	    margin-left:-288.68px;
+	    border-left: 288.68px solid transparent;
+	    border-right: 288.68px solid transparent;
+	    border-bottom: 500px solid $action-color;
+	}
 	
-  .lines {
-	  
-    &:before { 
-      //top: $button-size/3.5;
-	  width:$button-size; 
-    }
-    &:after { 
-      //top: -$button-size/3.5;
-	  width:$button-size; 
-    }
-  }
+	/*
+	//For an equilateral triangle it's worth pointing out that the height is 86.6% of the 
+	//width so (border-left-width + border-right-width) * 0.866% = border-bottom-width
+	*/
+	
 }
-.lines-button.close {
-  -webkit-transform: scale3d(.8,.8,.8);
-          transform: scale3d(.8,.8,.8);
-}*
-//x2 transitions
-.lines-button.x2{
-    .lines{
-      transition: background .1s .1s ease;
 
-      &:before, &:after{
-        //set transform origin
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-        transition: top .1s .2s ease, -webkit-transform .1s ease;
-        transition: top .1s .2s ease, transform .1s ease;
-      }
-    }
-}
-.lines-button.x2.close{
-  .lines {
-    transition: background .1s 0s ease;
-    background: transparent;
 
-    &:before, &:after{
-      transition: top .1s ease, -webkit-transform .1s .2s ease;//delay the formation of the x till the minus is formed  
-      transition: top .1s ease, transform .1s .2s ease;//delay the formation of the x till the minus is formed  
-      top:0;
-      width: $button-size;
-    }
-    &:before{
-      -webkit-transform: rotate3d(0,0,1,45deg); 
-              transform: rotate3d(0,0,1,45deg); 
-    }
-    &:after{
-      -webkit-transform: rotate3d(0,0,1,-45deg); 
-              transform: rotate3d(0,0,1,-45deg); 
-    }
-  }
-}
-//END MENU ICON

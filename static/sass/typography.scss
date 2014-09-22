@@ -2,15 +2,14 @@
 //////////////////////////////////////////////////////////////////////////////// 02 TYPOGRAPHY 
 */
 
-
 // Icon Fonts
 @font-face {
 	font-family: 'icons';
-	src:url('../fonts/icons.eot?-i6hczf');
-	src:url('../fonts/icons.eot?#iefix-i6hczf') format('embedded-opentype'),
-		url('../fonts/icons.woff?-i6hczf') format('woff'),
-		url('../fonts/icons.ttf?-i6hczf') format('truetype'),
-		url('../fonts/icons.svg?-i6hczf#icons') format('svg');
+	src:url('../fonts/icons.eot?x06ds1');
+	src:url('../fonts/icons.eot?#iefixx06ds1') format('embedded-opentype'),
+		url('../fonts/icons.woff?x06ds1') format('woff'),
+		url('../fonts/icons.ttf?x06ds1') format('truetype'),
+		url('../fonts/icons.svg?x06ds1#icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,35 +26,48 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-// Icon Calls
-.icon-play:before {	content: "\e606";}
+.icon-ThrilldernessWordmark:before { content: "\e600";}
+.icon-play:before {content: "\e606";}
 .icon-stop:before {content: "\e607";}
 .icon-pause:before {content: "\e608";}
 .icon-forward:before {content: "\e609";}
 .icon-backward:before {content: "\e60a";}
-.icon-right:before {content: "\e60d";font-size:1.5em;}
-.icon-left:before {content: "\e60e";font-size:1.5em;}
-.icon-up:before {content: "\e60f";font-size:1.5em;}
-.icon-down:before {content: "\e610";font-size:1.5em;}
+.icon-right:before {content: "\e60d";}
+.icon-left:before {content: "\e60e";}
+.icon-up:before {content: "\e60f";}
+.icon-down:before {	content: "\e610";}
 .icon-share:before {content: "\e614";}
 .icon-plus:before {content: "\e616";}
 .icon-close:before {content: "\e617";}
 .icon-check:before {content: "\e619";}
 .icon-export:before {content: "\e61a";}
 .icon-paperplane:before {content: "\e61c";}
-.icon-cc:before {content:"\e625";}
-.icon-github:before {content:"\e626";}
-.icon-vimeo:before {content:"\e627";}
-.icon-twitter:before {content:"\e628";}
-.icon-facebook:before {content:"\e629";}
-.icon-google:before {content:"\e62a";}
-.icon-tumblr:before {content:"\e62b";}
+.icon-cc:before {content: "\e625";}
+.icon-github:before {content: "\e626";}
+.icon-vimeo:before {content: "\e627";}
+.icon-twitter:before {content: "\e628";}
+.icon-facebook:before {content: "\e629";}
+.icon-google:before {content: "\e62a";}
+.icon-tumblr:before {content: "\e62b";}
+.icon-export2:before {content: "\e61b";}
+.icon-location:before {content: "\e601";}
+.icon-map:before {content: "\e602";}
+.icon-heart:before {content: "\e604";}
+.icon-chat:before {content: "\e605";}
+.icon-search:before {content: "\e60b";}
+.icon-clock:before {content: "\e60c";}
+.icon-bolt:before {content: "\e615";}
+.icon-earth:before {content: "\e611";}
+.icon-cart:before {content: "\e612";}
+.icon-instagram:before {content: "\e62e";}
+
+
 
 body{
-	font-family:"source-sans",helvetica,arial,sans-serif;
+	font-family: 'Source Sans Pro', helvetica, arial, sans-serif;
 	font-size:.8em;
-	color:$dkblue;
-	
+	text-align:left;
+	color:$text-color;
 	@media screen and (min-width:(em(480))){
 		font-size:1em;
 		line-height:1.6667em;
@@ -67,6 +79,11 @@ body{
 15px @ 1:1.5	 
 30px @ 1:1.5	 
 ----------------------*/
+article{
+	>h1, >h2, >h3 {
+	color:$black;
+	}
+}
 
 
 h1 			{   font-size: 3.0000em; /* 45px */
@@ -75,9 +92,9 @@ h1 			{   font-size: 3.0000em; /* 45px */
 				margin-bottom: 0.0000em;
 			}			
 h2 			{  	font-size: 2.2500em; /* 33.75px */
-  				line-height: 1.4815em; /* 50px */
-  			  	margin-top: 0.7407em;  
-				margin-bottom: 0.0000em; 
+  				line-height: 1.25em; /* 50px */
+  			  	margin-top: 0.75em;  
+				margin-bottom: 0.2500em; 
 			}
 h3 			{ 	font-size: 2.0000em; /* 30px */
   				line-height: 1.6667em; /* 50px */
@@ -142,25 +159,35 @@ small{
 }
 
 blockquote{
-	font-style:italic; 
 	line-height:175%; 
 	font-size:1.15em; 
 	float:left;  
-	font-style:italic; 
-	font-weight:400; 
+	font-weight:300; 
 	padding: 0 0 0 2em; 
-	margin: 2em 0 2em;
+	margin: 1.5em 0 1.5em;
+	border-left:4px solid $action-color;
+	letter-spacing: -.01em;
+	p{
+		margin:0;
+	}
+	.author{
+		font-size:.85em; 
+		font-weight:700;
+		text-transform:uppercase;
+		letter-spacing:.15em;
+	}
+	
 	@media screen and (min-width:(em(800))){
 		font-size:1.25em;
 	}
 }
 
 blockquote:before{
-	content:"\201c";
-	font-size:5em;
-	text-indent:-1.25em;
-	margin-top:.25em;
-	float:left;
+//	content:"\201c";
+//	font-size:5em;
+//	text-indent:-.75em;
+//	margin-top:.25em;
+//	float:left;
 }
 
 figure{
