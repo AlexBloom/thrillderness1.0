@@ -1,16 +1,19 @@
 <?php include_once 'header.php' ?>	
 	
 	<section id="intro" class="full-screen-container"  data-stellar-background-ratio=".75" data-stellar-horizontal-offset="50">
-		<!-- <section class="frame full-screen-content">
+		
 
-		</section> -->
+		<section class="frame full-screen-content">
+			<a href="quote"> Continue <span class="icon-down"> </span> </a>
+		</section>
+		
 		<div class="image-filter"  
 		data-stellar-background-ratio="-.05"
         data-stellar-horizontal-offset="50"
         data-stellar-vertical-offset="42"
 		>
 			
-			<div id="logo-mask" style="padding-top:20%;">
+			<div id="logo-mask" style="padding-top:50%;" data-stellar-ratio=".5">
 				<h1> Thrillderness </h1>
 			</div>
 			

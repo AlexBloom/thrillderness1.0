@@ -98,11 +98,14 @@ input[type="submit"], .inline-button {
 	background-image:url(../img/home_hero.jpg);
 	@include full-bleed-background;
 	.frame{
-		display:none;
-		background-color:$green;
-		
+		//display:none;
+		//background-color:$green;
+		a{
+			display:block;
+			color:$green;
+			text-decoration:none;
+		}
 	}
-	
 	.image-filter{
 		position:absolute;
 		top:0;
@@ -117,9 +120,11 @@ input[type="submit"], .inline-button {
 		//-webkit-mask-image: url(../img/mask.png);
 	}
 	#logo-mask{
+		
 		text-align:center;
 		width:100%;
 		h1{
+			//position:fixed;
 			font-size:12em;
 			margin:1em 0;
 		}

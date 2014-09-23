@@ -396,9 +396,10 @@ a:visited {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat; }
-  #intro .frame {
-    display: none;
-    background-color: #43b656; }
+  #intro .frame a {
+    display: block;
+    color: #43b656;
+    text-decoration: none; }
   #intro .image-filter {
     position: absolute;
     top: 0;
