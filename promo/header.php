@@ -21,7 +21,7 @@
 		
 	<header id="site-header">
 	
-		<a id="logo" href="#"> Thrillderness </a>
+		<a id="logo" href="#"> <h1>Thrillderness</h1> </a>
 	
 	</header>
 

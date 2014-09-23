@@ -159,19 +159,21 @@
 
 
 body{
-	
+	font-family:"adobe-garamond-pro", georgia, times, serif;
 }
 
-p.intro{
-	font-size: 1.3333em; /* 20px */
-	line-height: 1.2500em; /* 25px */
-	margin-top: 1.2500em;  
-	margin-bottom: 1.2500em;
+h1, h2, h3{
+	font-family:"proxima-nova-condensed", tahoma, sans-serif;
+}
+
+
+p{
+	font-size: 1em;
 	@media screen and (min-width:(em(800))){
-		font-size: 1.5000em; /* 22.5px */
-		line-height: 1.5em; /* 25px */
-		margin-top: 1.1111em;  
-	    margin-bottom: 1.1111em; 
+		font-size: 1.25000em; /* 22.5px */
+		line-height: 1.25em; /* 25px */
+		margin-top: 1em;  
+	    margin-bottom: 1em; 
 	}
 }
 
@@ -182,21 +184,25 @@ small{
 }
 
 blockquote{
+	display:block;
+	width:100%;
+	text-align:center;
 	font-style:italic; 
 	line-height:175%; 
-	font-size:1.15em; 
+	font-size:2em; 
 	float:left;  
 	font-style:italic; 
 	font-weight:400; 
-	padding: 0 0 0 2em; 
-	margin: 2em 0 2em;
+	padding: 0; 
+	margin: .5em 0;
+	
 	@media screen and (min-width:(em(800))){
-		font-size:1.25em;
+		font-size:3em;
 	}
 }
 
 blockquote:before{
-	content:"\201c";
+	//content:"\201c";
 	font-size:5em;
 	text-indent:-1.25em;
 	margin-top:.25em;
@@ -204,17 +210,22 @@ blockquote:before{
 }
 
 figure{
-
+	display:block;
+	margin:0 auto;
+	max-width:(em(800));
 }
 
 figcaption{
-font-size:0.9em;
-font-style:italic;
-padding:1.25em .75em .75em;
+font-size:1em;
+padding:1em;
 line-height:175%;
 	@media screen and (min-width:(em(800))){
 		font-size:1em;
 	}
+}
+
+strong{
+	font-weight:800;
 }
 
 .run-in{

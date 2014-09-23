@@ -39,11 +39,19 @@ transition-duration: .25s;
 }
 
 @mixin half-second-transition{
--webkit-transition-duration: .5s;
--moz-transition-duration: .5s;
--ms-transition-duration: .5s;
--o-transition-duration: .5s;
-transition-duration: .5s;
+-webkit-transition-duration: 0.5s;
+-moz-transition-duration: 0.5s;
+-ms-transition-duration: 0.5s;
+-o-transition-duration: 0.5s;
+transition-duration: 0.5s;
+}
+
+@mixin half-em-border-radius{
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+-ms-border-radius: .5em;
+-o-border-radius: .5em;
+border-radius:.5em;
 }
 
 @mixin one-em-border-radius{
@@ -52,6 +60,14 @@ transition-duration: .5s;
 -ms-border-radius: 1em;
 -o-border-radius: 1em;
 border-radius:1em;
+}
+
+@mixin perfect-circle{
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius:50%;
 }
 
 @mixin drop-shadow{

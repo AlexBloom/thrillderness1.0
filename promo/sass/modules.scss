@@ -1,11 +1,16 @@
 // MODULES
-
+.frame{
+	max-width:(em(800));
+	text-align:center;
+	padding:2em 4em;
+}
 
 
 
 //Full Screen / Vertical Centering
 
 .full-screen-container{
+	position:relativet;
     display: -webkit-flex;
     display: flex;
 	width:100%;
@@ -14,8 +19,8 @@
 
 .full-screen-content{
 	margin: auto;
-	max-width:(em(800));
-	padding:1em;
+	//max-width:(em(800));
+	//padding:1em;
 }
 
 .vertical-container {
@@ -47,14 +52,6 @@ article{
 	}
 }
 
-//#sidebar{
-//	width:100%;
-//	@media screen and (min-width:(em(800))){
-//		float:left;
-//		max-width:(em(300));
-//		padding:0 1em;
-//	}
-//}
 
 
 
