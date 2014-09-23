@@ -26,12 +26,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
     <script src="js/plugins.js"></script>
-	<script src="js/vendor/jquery.simpleWeather.min.js"></script>
-	<script src="js/jquery.localScroll.min.js"></script>
-	<script src="js/jquery.scrollTo.min.js"></script>
-    <script src="js/swipe.js"></script>
 	<script src="js/main.js"></script>
-	
 	
     <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

@@ -80,15 +80,13 @@ input[type="submit"], .inline-button {
 	position:fixed;
 	top:0;
 	width:100%;
-
-			#logo{
-				display:block;
-				//font-size:1em;
-				text-align:center;
-				margin:0 auto;
-				width:50%;
-			}
-			
+		#logo{
+			display:block;
+			//font-size:1em;
+			text-align:center;
+			margin:0 auto;
+			width:50%;
+		}	
 }
 
 // LAYOUT
@@ -97,29 +95,93 @@ input[type="submit"], .inline-button {
 }
 
 #intro{
-	background-image:url(../img/quote-background.jpg);
+	background-image:url(../img/home_hero.jpg);
 	@include full-bleed-background;
+	.frame{
+		display:none;
+		background-color:$green;
+		
+	}
+	
+	.image-filter{
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		background-clip:text;
+		-webkit-background-clip:text;
+		background-image:url(../img/home_hero.jpg);
+		-webkit-text-fill-color: transparent;
+		@include full-bleed-background;
+		//-webkit-mask-image: url(../img/mask.png);
+	}
+	#logo-mask{
+		text-align:center;
+		width:100%;
+		h1{
+			font-size:12em;
+			margin:1em 0;
+		}
+	}
+	
 }
 
 #quote{
-	background-image:url(../img/quote-background.jpg);
+	position:relative;
+	background-image:url(../img/quote_bg_2000.jpg);
 	@include full-bleed-background;
 	color:$white;
-	background-color:$green;
+	.frame{
+		position:relative;
+		z-index:2;
+	}
+	figure{
+		margin:0 auto;
+		padding:0;
+		width:(em(250));
+		@media screen and (min-width:(em(500))){
+			width:(em(300));
+		}
+		@media screen and (min-width:(em(800))){
+			width:(em(600));
+		}
+		@media screen and (min-width:(em(1400))){
+			width:(em(1000));
+		}
+	}
+
+	
+	.color-filter{
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		background-color:$green;
+		opacity:.65;
+		z-index:1;
+	}
 }
 #definition{
 	position:relative;
+	//background-color:$light-grey;
 	.frame{
 		background-color:$green;
-		width:(em(400));
-		height:(em(400));
+		width:(em(360));
+		height:(em(360));
 		padding:0;
 		line-height:1em;
+		border:.5em double $black;
 		@include perfect-circle;
 	}
 	h1,h2{
-		margin-top:2em;
-		margin-bottom:.5em;
+	    font-size:2.5em;
+		margin:1.75em 0 .75em 0;
+
+	}
+	p{
+		font-size:1.5em;
 	}
 	#want-in{
 		position:absolute;

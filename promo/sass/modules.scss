@@ -2,7 +2,7 @@
 .frame{
 	max-width:(em(800));
 	text-align:center;
-	padding:2em 4em;
+	padding:2em;
 }
 
 
@@ -10,7 +10,7 @@
 //Full Screen / Vertical Centering
 
 .full-screen-container{
-	position:relativet;
+	position:relative;
     display: -webkit-flex;
     display: flex;
 	width:100%;
@@ -19,6 +19,8 @@
 
 .full-screen-content{
 	margin: auto;
+	
+
 	//max-width:(em(800));
 	//padding:1em;
 }

@@ -1,5 +1,23 @@
 <?php include_once 'header.php' ?>	
-	<section id="quote" class=" full-screen-container">
+	
+	<section id="intro" class="full-screen-container"  data-stellar-background-ratio=".75" data-stellar-horizontal-offset="50">
+		<!-- <section class="frame full-screen-content">
+
+		</section> -->
+		<div class="image-filter"  
+		data-stellar-background-ratio="-.05"
+        data-stellar-horizontal-offset="50"
+        data-stellar-vertical-offset="42"
+		>
+			
+			<div id="logo-mask" style="padding-top:20%;">
+				<h1> Thrillderness </h1>
+			</div>
+			
+		</div>
+	</section>
+	
+	<section id="quote" class="full-screen-container">
 		<section class="frame full-screen-content">
 		
 		<figure>
@@ -29,10 +47,12 @@
 		</figure>
 		
 		</section>
+		<div class="color-filter"></div>
 	</section>
 	
 	<section id="definition" class=" full-screen-container" >
 		<section class="frame full-screen-content">
+			
 		<h1> Thrillderness </h1>
 		<p> Sharing the wealth of<br> endangered knowledge. </p>
 		<p><strong>Coming 2015</strong></p>
@@ -101,12 +121,12 @@
 		
 		
 		
-		<div class="mc-field-group input-group">
+		<!-- <div class="mc-field-group input-group">
 		    <strong>Email Format </strong>
 		    <ul class="clearfix"><li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label></li>
 		<li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
 		</ul>
-		</div>
+		</div> -->
 			<div id="mce-responses" class="clear">
 				<div class="response" id="mce-error-response" style="display:none"></div>
 				<div class="response" id="mce-success-response" style="display:none"></div>
