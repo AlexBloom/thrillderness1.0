@@ -322,7 +322,7 @@ article {
   .nontouchnav .next {
     right: 0; }
 
-/* responsive-nav.js v1.0.15 by @viljamis */
+/*! responsive-nav.js v1.0.15 by @viljamis */
 .js #info-1 {
   clip: rect(0 0 0 0);
   max-height: 0;
@@ -396,10 +396,19 @@ a:visited {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat; }
-  #intro .frame a {
+  #intro .frame #arrow {
+    position: absolute;
+    top: 3em;
+    left: 43%;
+    width: 4em;
     display: block;
-    color: #43b656;
-    text-decoration: none; }
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    z-index: 1000;
+    padding: 1.75em 1.25em .75em 1.25em; }
+    #intro .frame #arrow img {
+      width: 100%; }
   #intro .image-filter {
     position: absolute;
     top: 0;
@@ -415,10 +424,20 @@ a:visited {
     background-repeat: no-repeat; }
   #intro #logo-mask {
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    padding-top: 20%; }
     #intro #logo-mask h1 {
-      font-size: 12em;
+      font-size: 4em;
       margin: 1em 0; }
+      @media screen and (min-width: 37.5em) {
+        #intro #logo-mask h1 {
+          font-size: 6em; } }
+      @media screen and (min-width: 50em) {
+        #intro #logo-mask h1 {
+          font-size: 8em; } }
+      @media screen and (min-width: 87.5em) {
+        #intro #logo-mask h1 {
+          font-size: 10em; } }
 
 #quote {
   position: relative;
@@ -430,6 +449,12 @@ a:visited {
   #quote .frame {
     position: relative;
     z-index: 2; }
+  #quote a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid black; }
+    #quote a:hover {
+      color: black; }
   #quote figure {
     margin: 0 auto;
     padding: 0;
@@ -454,29 +479,29 @@ a:visited {
     z-index: 1; }
 
 #definition {
-  position: relative; }
+  position: relative;
+  background-color: #eeeeee;
+  text-align: center; }
   #definition .frame {
     background-color: #43b656;
     width: 22.5em;
     height: 22.5em;
     padding: 0;
     line-height: 1em;
-    border: 0.5em double black;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%; }
+    border: 0.5em double black; }
   #definition h1, #definition h2 {
+    color: white;
     font-size: 2.5em;
-    margin: 1.75em 0 .75em 0; }
+    margin: 2.125em 0 .75em 0; }
   #definition p {
     font-size: 1.5em; }
   #definition #want-in {
     position: absolute;
     display: block;
     bottom: 2em;
-    right: 2em;
+    left: 0;
+    right: 0;
+    text-align: center;
     font-family: "proxima-nova-condensed", tahoma, sans-serif;
     font-weight: 800;
     font-size: 2em;

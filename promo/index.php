@@ -4,7 +4,11 @@
 		
 
 		<section class="frame full-screen-content">
-			<a href="quote"> Continue <span class="icon-down"> </span> </a>
+			
+			<a id="arrow" href="#quote">
+				<p><strong>All great journeys start with one step.</strong></p>
+				<img src="img/arrow_down_black.gif" alt="Continue"> 
+			</a>
 		</section>
 		
 		<div class="image-filter"  
@@ -13,7 +17,7 @@
         data-stellar-vertical-offset="42"
 		>
 			
-			<div id="logo-mask" style="padding-top:50%;" data-stellar-ratio=".5">
+			<div id="logo-mask">
 				<h1> Thrillderness </h1>
 			</div>
 			
@@ -44,7 +48,7 @@
 				In Wildness is the preservation of the world. 
 			</blockquote>
 			<figcaption>
-				<strong>Henry David Thoreau,</strong> <em>Walking</em>, 1862
+				<strong>Henry David Thoreau,</strong> <em><a href="http://thoreau.eserver.org/walking.html"target=_blank>Walking</a></em>, 1862
 			</figcaption>
 			
 		</figure>
@@ -59,8 +63,11 @@
 		<h1> Thrillderness </h1>
 		<p> Sharing the wealth of<br> endangered knowledge. </p>
 		<p><strong>Coming 2015</strong></p>
+		
 		</section>
+		
 		<a id="want-in" href="#sign-up">Want in?</a>
+		
 	</section>
 	
 	<section id="sign-up" class=" full-screen-container">
