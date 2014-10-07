@@ -226,6 +226,7 @@ strong {
   line-height: 0em; }
 
 .frame {
+  width: 100%;
   max-width: 50em;
   text-align: center;
   padding: 2em; }
@@ -529,12 +530,29 @@ a:visited {
     font-weight: bold; }
 
 #because {
-  background-color: black;
-  color: #43b656;
-  font-family: 'proxima-nova-condensed', helvetica, arial, sans-serif; }
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #888888;
+  font-family: 'proxima-nova-condensed', helvetica, arial, sans-serif;
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+  -ms-transition-duration: .25s;
+  -o-transition-duration: .25s;
+  transition-duration: .25s; }
   #because a {
+    display: block;
     color: #43b656;
-    font-weight: bold; }
+    font-weight: bold;
+    text-decoration: none;
+    border: 0.25em solid #43b656;
+    margin: .5em;
+    padding: 1em;
+    line-height: 150%; }
+  #because small {
+    font-size: 1rem;
+    color: #43b656; }
 
 #reasons {
   font-size: 1.5em; }
@@ -542,6 +560,9 @@ a:visited {
 .two-columns li {
   float: left;
   width: 50%; }
+
+h2 {
+  margin-top: 3em; }
 
 /* ==========================================================================
    Definition Section

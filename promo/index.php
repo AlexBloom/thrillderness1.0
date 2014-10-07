@@ -36,7 +36,7 @@
 			</h1>
 			
 			<a href="#definition" class="button"> Yes </a>
-			<a href="#because" class="button"> No </a>
+			<a href="#because" class="open-because button"> No </a>
 			
 		</section>
 		
@@ -45,16 +45,23 @@
 	
 	<section id="because" class="full-screen-container">
 		<section class="frame full-screen-content">
-			<ul id="reasons" class="two-columns">
+			<ul id="reasons" class="two-columns clearfix">
 				<li>
 					because,<br>
-					<a href="mailto:teachers@thrillderness.org?subject=Hello"target=_blank>I'm an expert in the outdoors -<br> but I would like to share my knowledge with others.</a>
+					<a href="mailto:teachers@thrillderness.org?subject=Hello"target=_blank>
+						I'm an outdoor expert
+					<br> <small>and I've got lessons to share.</small>
+					</a>
+					
 				</li>
 				<li>
 					because,<br>
-					<a href="http://secondlife.com/">I don't really like adventure.</a>
+					<a href="http://secondlife.com/">I don't like adventures
+					<br><small>or being outside.</small>
+					</a>
 				</li>
 			</ul>
+			<h2 class="close-because clearfix"> <span class="icon-cross"> </span> </h2>
 		</section>
 	</section>
 	

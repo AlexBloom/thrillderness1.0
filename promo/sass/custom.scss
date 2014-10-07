@@ -236,12 +236,26 @@ input[type="submit"], .inline-button {
 }
 
 #because{
-	background-color:$black;
-	color:$green;
+	position:fixed;
+	top:0;
+	z-index:1000;
+	background-color:rgba(0,0,0,.95);
+	color:$medium-grey;
 	font-family:'proxima-nova-condensed', helvetica, arial, sans-serif;
+	@include quarter-second-transition;
 	a{
+		display:block;
 		color:$green;
 		font-weight:bold;
+		text-decoration:none;
+		border:.25em solid $green;
+		margin:.5em;
+		padding:1em;
+		line-height:150%;
+	}
+	small{
+		font-size:1rem;
+		color:$green;
 	}
 }
 #reasons{
@@ -251,7 +265,11 @@ input[type="submit"], .inline-button {
 	li{
 		float:left;
 		width:50%;
+		
 	}
+}
+h2{
+	margin-top:3em;
 }
 
 /* ==========================================================================
@@ -327,6 +345,9 @@ input[type="submit"], .inline-button {
 		color:$black;
 	}
 }
+
+
+
 
 /* ==========================================================================
    Sign Up Form

@@ -26,5 +26,13 @@ $(document).ready(function () {
    		$('.mc-address-group').removeClass('hidden');
    	 });
 	 
+ 	$('#because').addClass('visuallyhidden');
+    	$('.open-because').click(function(){
+    		$('#because').removeClass('visuallyhidden');
+    	});
+    	$('.close-because').click(function(){
+    		$('#because').addClass('visuallyhidden');
+    	});
+	 
 
  });
