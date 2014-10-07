@@ -8,8 +8,6 @@
 @import "typography";
 @import "modules";
 
-
-
 // TYPE & TEXT
 body{
 	background-color: $white;
@@ -88,40 +86,59 @@ input[type="submit"], .inline-button {
 			width:50%;
 		}	
 }
-
 // LAYOUT
 #main{
 	position:relative;
 }
-
+/* ==========================================================================
+   Intro Section
+   ========================================================================== */
 #intro{
 	background-image:url(../img/home_hero.jpg);
-	@include full-bleed-background;
+	//@include full-bleed-background;
+	background-size:cover;
+	background-position:50% 20%;
 	.frame{
-		//position:relative;
-		//display:none;
-		//
+		figure{
+			margin:0 auto 1em;
+			padding:0;
+			width:(em(250));
+			@media screen and (min-width:(em(500))){
+				width:(em(300));
+			}
+			@media screen and (min-width:(em(800))){
+				width:(em(600));
+			}
+			@media screen and (min-width:(em(1400))){
+				//width:(em(1000));
+			}
+			
+			a{
+				color:$black;
+				font-weight:bold;
+			}
+		}
 		#arrow{
 			position:absolute;
-			top:3em;
-			left:43%;
-			width:4em;			
-			display:block;
-			cursor:pointer;
-			color:$black;
-			text-decoration:none;
+			top:7em;
+			left:0;
+			right:0;		
 			z-index:1000;
-			//background-color:$black;
-			//@include perfect-circle;
-			padding:1.75em 1.25em .75em 1.25em;
-			
-			img{
-				width:100%;
-			}
+			.wrap{
+				display:block;
+				cursor:pointer;
+				color:$black;
+				text-decoration:none;
+				width:4em;
+				margin:0 auto;
+				img{
+					width:100%;
+				}	
+			}			
 		}
 	}
 	.image-filter{
-		position:absolute;
+		position:fixed;
 		top:0;
 		bottom:0;
 		left:0;
@@ -130,18 +147,19 @@ input[type="submit"], .inline-button {
 		-webkit-background-clip:text;
 		background-image:url(../img/home_hero.jpg);
 		-webkit-text-fill-color: transparent;
-		@include full-bleed-background;
-		//-webkit-mask-image: url(../img/mask.png);
-	}
+		//@include full-bleed-background;
+		background-size:cover;
+		background-position:50% 25%;
+		background-repeat: repeat;
+	}	
 	#logo-mask{
-		
 		text-align:center;
 		width:100%;
-		padding-top:20%;
+		margin:auto;
 		h1{
-			//position:fixed;
 			font-size:4em;
-			margin:1em 0;
+			margin:0 0;
+			padding:0;
 			@media screen and (min-width:(em(600))){
 				font-size:6em;
 			}
@@ -152,11 +170,26 @@ input[type="submit"], .inline-button {
 				font-size:10em;
 			}
 		}
-	}
-	
+	}	
 }
-
-#quote{
+#intro-arrow{
+	display:block;
+	//opacity:.5;
+	-webkit-animation: myfirst 8s ease-in-out 1s infinite alternate; /* Chrome, Safari, Opera */
+	animation: myfirst 8s ease-in-out 1s infinite alternate; /* Standard syntax */
+}
+@-webkit-keyframes myfirst {
+    0%   {padding-top:0;}
+    05%  {padding-top:.5em;}
+	10%  {padding-top:0;}
+	90%  {padding-top:0;}
+	95%  {padding-top:.5em;}
+    100% {padding-top:0;}
+}
+/* ==========================================================================
+   Question Section
+   ========================================================================== */
+#question{
 	position:relative;
 	background-image:url(../img/quote_bg_2000.jpg);
 	@include full-bleed-background;
@@ -168,25 +201,15 @@ input[type="submit"], .inline-button {
 	a{
 		color:$white;
 		text-decoration:none;
-		border-bottom:1px solid $black;
+		//border-bottom:1px solid $black;
 		&:hover{
-			color:$black;
+			//color:$black;
 		}
 	}
-	figure{
-		margin:0 auto;
-		padding:0;
-		width:(em(250));
-		@media screen and (min-width:(em(500))){
-			width:(em(300));
-		}
-		@media screen and (min-width:(em(800))){
-			width:(em(600));
-		}
-		@media screen and (min-width:(em(1400))){
-			width:(em(1000));
-		}
+	h1{
+		color:$white;
 	}
+	
 
 	.color-filter{
 		position:absolute;
@@ -195,60 +218,106 @@ input[type="submit"], .inline-button {
 		left:0;
 		right:0;
 		background-color:$green;
-		opacity:.65;
+		opacity:.75;
 		z-index:1;
 	}
+	#definition-link{
+		display:block;
+		position:absolute;
+		bottom:0;
+		left:0;
+		text-align:center;
+		padding:1em;
+		text-decoration:none;
+		border:none;
+		z-index:2;
+		font-weight:bold;
+	}
 }
+
+#because{
+	background-color:$black;
+	color:$green;
+	font-family:'proxima-nova-condensed', helvetica, arial, sans-serif;
+	a{
+		color:$green;
+		font-weight:bold;
+	}
+}
+#reasons{
+	font-size:1.5em;
+}
+.two-columns{
+	li{
+		float:left;
+		width:50%;
+	}
+}
+
+/* ==========================================================================
+   Definition Section
+   ========================================================================== */
 #definition{
 	position:relative;
 	background-color:$light-grey;
+	background-image:url(../img/cartographer.jpg);
 	text-align:center;
 	.frame{
+		p{
+			font-family:'proxima-nova-condensed', helvetica, sans-serif;
+		}
+	}
+	.circle{
 		background-color:$green;
-		width:(em(360));
-		height:(em(360));
-		padding:0;
+		width:(em(300));
+		padding:0 0 3em;
+		margin: 0 auto;
 		line-height:1em;
-		border:.5em double $black;
-		//transform:rotate(5deg);
-		//&:hover{
-		//	transform:rotate(45deg);
-		//}
-		//@include quarter-second-transition;
-		//@include perfect-circle;
-		//&:after{
-		//	font-family:'AlexBloom';
-		//	font-weight:bold;
-		//	font-size:2em;
-		//	vertical-align:baseline;
-		//	line-height:0;
-		//	content:"\52";
-		//	position:absolute;
-		//	top:52%;
-		//	left:100%;
-		//	//width:5em;
-		//	padding:0 0 0 .5em;
-		//	letter-spacing:-.35em;
-		//	margin-right:1em;
-		//	border-top:2px solid $black;
-		//}
-	}
-	h1,h2{
-		color:$white;
-	    font-size:2.5em;
-		margin:2.125em 0 .75em 0;
+		border:.5em solid $black;
+		@media screen and (min-width:(em(700))){
+			width:(em(360));
+			height:(em(360));
+			padding:0;
+			@include perfect-circle;
+		}
+		
+		h1,h2{
+			color:$white;
+		    font-size:2.5em;
+			margin:2.125em 0 .75em 0;
 
+		}
+		p{
+			font-size:1.5em;
+		}
+		
 	}
-	p{
-		font-size:1.5em;
+	.stretch-arrow-down{
+		position:relative;
+		height:6em;
+		width:.125em;
+		margin:0 auto 3em;
+		background-color:$black;
+		&:before,&:after{		
+			position:absolute;
+			display:block;
+			content:' ';
+			background-color:$black;
+			height:3em;
+			width:.125em;
+			bottom:-.5em;
+			border-radius:.125em
+		}
+		&:before{
+			left:-1em;
+			transform:rotate(-45deg);
+		}
+		&:after{
+			right:-1em;
+			transform:rotate(45deg);
+		}
 	}
 	#want-in{
-		position:absolute;
-		display:block;
-		bottom:2em;
-		left:0;
-		right:0;
-		//width:100%;
 		text-align:center;	
 		font-family:"proxima-nova-condensed", tahoma, sans-serif;
 		font-weight:800;
@@ -259,14 +328,15 @@ input[type="submit"], .inline-button {
 	}
 }
 
+/* ==========================================================================
+   Sign Up Form
+   ========================================================================== */
 #sign-up{
-	background-color:$dark-grey;
+	background-color:$white;
 	color:$medium-grey;
-	
 	.frame{
 		max-width:(em(600));
 	}
-	
 	
 	h1,h2,h3{
 		color:$green;
@@ -286,8 +356,6 @@ input[type="submit"], .inline-button {
 	}
 	p{
 		text-align:center;
-		//font-size:1em;
-		//line-height:1.25em;
 	}
 	a{
 		font-weight:800;
@@ -301,11 +369,8 @@ input[type="submit"], .inline-button {
 	}
 	.mc-field-group{
 		margin:0;
-		padding:.5em 0;
-		//text-align:left;
-		
-		
-		
+		padding:.5em 0;	
+		text-align:left;
 		label{
 			margin:0;
 			padding:0;
@@ -318,9 +383,10 @@ input[type="submit"], .inline-button {
 			width:100%;
 			margin:.5em 0 0 0;
 			padding:.5em;
+			border:2px solid $black;
 			outline:none;
 			-webkit-border:none;
-			background-color:$light-grey;
+			//background-color:$light-grey;
 			&:focus{
 				background-color:$white;
 			}
@@ -375,9 +441,7 @@ input[type="submit"], .inline-button {
 		outline:none;
 		-webkit-border:none;
 		@include half-em-border-radius;
-	}
-	
-	
+	}	
 	.mc-address-group{
 		@include half-second-transition;
 		max-height:auto;
@@ -388,17 +452,33 @@ input[type="submit"], .inline-button {
 			@include half-second-transition;
 		}
 	}
-	
+
 }
 
 
-// FOOTER
+#smore{
+	display:block;
+	position:absolute;
+	bottom:0;
+	right:0;
+	text-align:center;
+	padding:1em;
+	text-decoration:none;
+	border:none;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 #site-footer{
     float:left;
-	width:90%;
+	width:100%;
     text-align:center;
-	padding:1em 0;
-	margin:0 5%;
+	padding:1em 0 0;
+	margin:0;
+	background-color:$white;
+	z-index:-1;
+	color:$dark-grey;
 	ul{
 		color:$text;
 		font-size: 1em;
@@ -411,13 +491,46 @@ input[type="submit"], .inline-button {
 			width:33.333%;
 			a{
 				text-decoration:none;
-			
 			}
-	 }
-}
-		
+		 }
+	}
+.up-arrow-tent{
+	position:relative;
+	width:4em;
+	margin:0 auto;
+	flex:none;
+	@include quarter-second-transition;	
+	&:before{
+		box-sizing:border-box;
+		position:absolute;
+		display:block;
+		content:' ';
+		height:4em;
+		width:4em;
+		margin:2em auto;
+		border-right:5em solid transparent;
+		border-left:5em solid transparent;
+		border-bottom:5em solid black;
+	}
 	
-	
+	&:after{
+		position:absolute;
+		display:block;
+		content:' ';
+		top:4em;
+		//left:-2em;
+		z-index:3;
+		border-right:2em solid transparent;
+		border-left:2em solid transparent;
+		border-bottom:2em solid white;
+	}
+	&:hover{
+		&:after{
+			top:3.5em;
+		}
+	}
+}		
+
 	#newsletter{
 		padding:0 1.6667em 1.6667em 1.6667em;	
 		margin: 0 0 1.6667em 0;
@@ -429,11 +542,10 @@ input[type="submit"], .inline-button {
 	}
 	#copyright{
 		width:100%;
+		//border-bottom:1em solid $black;
 	}
 
 }
-
-
 
 
 /* ==========================================================================
@@ -448,29 +560,22 @@ input[type="submit"], .inline-button {
 	width:100%;
 	margin:1.6667em 0;
 }
-
-
-
-
 .ir {
     background-color: transparent;
     border: 0;
     overflow: hidden;
     *text-indent: -9999px;
 }
-
 .ir:before {
     content: "";
     display: block;
     width: 0;
     height: 150%;
 }
-
 .hidden {
     display: none !important;
     visibility: hidden;
 }
-
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -481,7 +586,6 @@ input[type="submit"], .inline-button {
     position: absolute;
     width: 1px;
 }
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -491,21 +595,17 @@ input[type="submit"], .inline-button {
     position: static;
     width: auto;
 }
-
 .invisible {
     visibility: hidden;
 }
-
 .clearfix:before,
 .clearfix:after {
     content: " ";
     display: table;
 }
-
 .clearfix:after {
     clear: both;
 }
-
 .clearfix {
     *zoom: 1;
 }

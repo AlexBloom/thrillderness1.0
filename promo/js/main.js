@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 		// Fire LocalScroll
 		$('body').localScroll({
-			duration:1800
+			duration:800
 		}
 		
 		);
@@ -12,13 +12,13 @@ $(document).ready(function () {
 	
 		// Size Full-Screen Videos, Images, & Slideshows to window height.
 		$('.full-screen-container').css('min-height',$(window).height());
-		$('#logo-mask').css('padding-top',$(window).height()-300);
-		$('#arrow').css('left',$(window).width()/2-32);
+		$('#logo-mask').css('padding-top',$(window).height()/5);
+		$('#footer-info').css('padding-top',$(window).height()/3);
 
 		$(window).resize(function() {
 			$('.full-screen-container').css('min-height',$(window).height());
-			$('#logo-mask').css('padding-top',$(window).height()-300);
-			$('#arrow').css('left',$(window).width()/2-32);
+			$('#logo-mask').css('padding-top',$(window).height()/5);
+			$('#footer-info').css('padding-top',$(window).height()/3);
 		});
 
 	$('.mc-address-group').addClass('hidden');
@@ -26,10 +26,5 @@ $(document).ready(function () {
    		$('.mc-address-group').removeClass('hidden');
    	 });
 	 
-	 
-	 
-	 //#intro{ }
-	 //.image-mask{ }
-
 
  });
