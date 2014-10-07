@@ -6,8 +6,8 @@
 		<section class="frame full-screen-content">
 			
 			<a id="arrow" href="#quote">
-				<p><strong>All great journeys start with one step.</strong></p>
-				<img src="img/arrow_down_black.gif" alt="Continue"> 
+				<!-- <p><strong>All great journeys start with one step.</strong></p> -->
+				<img src="img/arrow_down_green.gif" alt="Continue"> 
 			</a>
 		</section>
 		
