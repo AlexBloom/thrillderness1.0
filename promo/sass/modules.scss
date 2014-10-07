@@ -5,7 +5,23 @@
 	padding:2em;
 }
 
-
+.button{
+	font-family:'proxima-nova-condensed', helvetica, arial, sans-serif;
+	font-size:1.5em;
+	font-weight:800;
+	display:inline-block;
+	border:.25em solid $white;
+	padding:.5em 1.5em;
+	margin:3em 1em;
+	//background-color:$green;
+	//border-left:.25em solid transparent;
+	//border-bottom:.25em solid green;
+	&:hover{
+		background-color:$white;	
+		color:$green!important;
+	}
+	
+}
 
 //Full Screen / Vertical Centering
 
