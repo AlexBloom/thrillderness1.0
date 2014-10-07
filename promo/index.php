@@ -3,19 +3,6 @@
 	<section id="intro" class="full-screen-container" >
 		<section class="frame full-screen-content">
 
-			
-			<a id="arrow" href="#quote">
-				<!-- <p><strong>All great journeys start with one step.</strong></p> -->
-				<img src="img/arrow_down_green.gif" alt="Continue"> 
-			</a>
-		</section>
-		
-		<div class="image-filter"  
-		data-stellar-background-ratio="-.05"
-        data-stellar-horizontal-offset="50"
-        data-stellar-vertical-offset="42"
-		>
-
 			<div id="arrow">
 					
 					<figure>
@@ -30,7 +17,7 @@
 				<a id="intro-arrow" class="wrap" href="#question">
 					<img src="img/arrow_down_black.gif" alt="Continue"> 
 				</a>
-			</div>
+			
 		</section>	
 		<div class="image-filter" data-stellar-background-ratio=".85" data-stellar-vertical-offset="-750" data-stellar-horizontal-offset="40">
 
