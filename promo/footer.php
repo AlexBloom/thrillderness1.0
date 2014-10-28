@@ -7,23 +7,14 @@
 
 	</section><!-- / end page container, begun in the header -->
 	
-	<footer id="site-footer" class="full-screen-container clearfix">	
-		<!-- <div class="clearfix">
-			<p> This has been a production of</p>
-		</div> -->
-		<div id="footer-info" class="full-screen-content clearfix">
-			<nav>
-				<ul class="clearfix">
-					<li> <a href="http://instagram.com/thrillderness"target=_blank> <span class="icon-instagram"> </span> </a> </li>
-					<li> <a href="http://tumblr.com/thrillderness"target=_blank> <span class="icon-tumblr"> </span> </a> </li>
-					<li> <a href="http://twitter.com/thrillderness"target=_blank> <span class="icon-twitter"> </span> </a> </li>
-				</ul>
-			</nav>
-			<div id="copyright" class="clearfix"> 
+	<footer id="site-footer" class="clearfix">	
+			
+			<div id="copyright" class="clearfix">
+				<h3>Thrillderness</h3> 
+				<p>Reviving endangered knowledge. Building a community. Having a blast.</p>
 				<p>&copy; Thrillderness 2014-2015</p> 
 			</div>	
-		</div>	
-		<!-- <a class="up-arrow-tent"> </a> -->
+
 	</footer>
 	
 	

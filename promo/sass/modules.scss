@@ -1,10 +1,4 @@
 // MODULES
-.frame{
-	width:100%;
-	max-width:(em(800));
-	text-align:center;
-	padding:2em;
-}
 
 .button{
 	font-family:'proxima-nova-condensed', helvetica, arial, sans-serif;
@@ -25,38 +19,30 @@
 }
 
 //Full Screen / Vertical Centering
-
 .full-screen-container{
 	position:relative;
     display: -webkit-flex;
     display: flex;
 	width:100%;
 	min-height:(em(400));
+	.full-screen-content{
+		margin: auto;
+	}
 }
-
-.full-screen-content{
-	margin: auto;
-	
-
-	//max-width:(em(800));
-	//padding:1em;
-}
-
 .vertical-container {
   display: -webkit-flex;
   display: flex;
   height: 300px;
-}
-.vertically-centered {
-  margin: auto;
+  .vertically-centered {
+    margin: auto;
+  }
+  
 }
 
 // Articles, Text Content
-
 article{
 	width:100%;
 	float:left;
-	//max-width:(em(900));
 	header{
 		width:100%;
 		padding:1em;
@@ -66,139 +52,60 @@ article{
 		max-width:(em(800));
 		margin:0 auto;
 	}
-	@media screen and (min-width:(em(800))){
-		
-	}
 }
 
-
-
-
-// Swipe Classes
-
-.swipe {
-  overflow:hidden;
-  visibility:hidden;
-  position:relative;
+// Grid Classes for Any Element
+section{
+	width:100%;
+	clear:both;
 }
-.swipe-wrap {
-  overflow:hidden;
-  position:relative;
-}
-.swipe-wrap > div {
-  position:relative;
-  float:left;
-  width:100%;
+.g1,.g2,.g3,.g4,.g5,.g6,{
+	display:block;
+	margin:0;
+	padding:0;
+	float:left;
 }
 
-.nontouchnav{
-	position: absolute;
-	bottom: 0;
-	top:0;
-	padding: .25em 0;
-	width: 100%;
-	z-index: 1000;
-	text-align: center;
-	font-size: 1.5em;
-	overflow: hidden;
-	
-	@media screen and (min-width:(em(1000))){
-		display:block;
-	}
-	
-	div{
-		position:absolute;
-		color:$medium-grey;
-		width: 1.5em;
-		cursor:pointer;
+figure{
+	position:relative;
+	figcaption{
 		text-align:center;
-		top:0;
+		h3{
+		position:absolute;
 		bottom:0;
-		padding-top:27%;
+		left:0;
+		right:0;
+		padding:1rem;
 		
-		background-color: rgba(255,255,255,0);
-		opacity:0;
-		@include quarter-second-transition;
-		
-		&:hover{
-			background-color: rgba(255,255,255,0.75);
-			opacity:0.5;
-			color:$black;
-			@include quarter-second-transition;
 		}
 	}
-
-	.prev{		
-		left:0;
+}
+nav{
+	//width:100%;
+	margin:0 auto;
+	display:flex;
+	a{
+		flex:1;
+		text-align:center;
 	}
-	
-	.next{
-		right:0;
-		//border-left:1px dotted $medium-grey;
-	}
-
 }
 
-
-// Responsive Nav Styles
-
-/*! responsive-nav.js v1.0.15 by @viljamis */
-
-//#nav ul {
-//  margin: 0;
-//  padding: 0;
-//  width: 100%;
-//  display: block;
-//  list-style: none;
-//}
-//
-//#nav li {
-//  width: 100%;
-//  display: block;
-//}
-
-.js #info-1 {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
+.g1{
+	width:100%;
 }
-
-#info-1.opened {
-  max-height: 9999px;
-  padding:0 0 6em 0;
+.g2{
+	width:50%;
 }
-
-.expand {
-	font-weight:bold;
-  color: white;
-  padding: 0;
-  border: 0;
-  cursor: pointer;
+.g3,.third{
+	float:left;
+	width:33.333%;
 }
-
-a.closed {
-	transition:2s;
-  
+.g4{
+	width:25%;
 }
-
-a.opened {
-	display:block;
-	font-size:1.1em;
-	
-	/* Safari */
-	-webkit-transform: rotateY(-180deg);
-	-webkit-transform: rotateZ(-45deg);
-
-	/* Firefox */
-	-moz-transform: rotateZ(-45deg);
-
-	/* IE */
-	-ms-transform: rotateZ(-45deg);
-
-	/* Opera */
-	-o-transform: rotateZ(-45deg);
-
+.g5{
+	width:20%;
+}
+.g6{
+	width:16.667%;
 }
