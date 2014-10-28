@@ -89,7 +89,25 @@ input[type="submit"], .inline-button {
 #main{
 	position:relative;
 }
+#quote{
+	width:100%;
+	background-image:url(../img/quote_bg_800.jpg);
+	@include full-bleed-background;
+	figure{
+		background-color:$green-translucent;
+	}
+}
+#intro{
+	//background-color:$green;
+}
 
+#logo{
+	margin-top:5rem;
+	img{
+		width:50%;
+		margin:0 auto;
+	}
+}
 
 h2{
 	padding:8rem 3rem;
@@ -97,6 +115,7 @@ h2{
 }
 
 #site-footer{
+	h3{color:$light-grey;}
 	background-color:$black;
 	color:$medium-grey;
 	text-align:center;

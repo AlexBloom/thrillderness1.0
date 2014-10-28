@@ -59,22 +59,33 @@ section{
 	width:100%;
 	clear:both;
 }
-.g1,.g2,.g3,.g4,.g5,.g6,{
-	display:block;
-	margin:0;
-	padding:0;
+.full{
 	float:left;
+	width:100%;
+}
+.half{
+	float:left;
+	width:50%;
+}
+.third{
+	float:left;
+	@media screen and (min-width:(em(800))){
+		width:33.333%;
+	}
 }
 
 figure{
+	img{
+		width:100%;
+	}
 	position:relative;
 	figcaption{
 		text-align:center;
 		h3{
-		position:absolute;
-		bottom:0;
-		left:0;
-		right:0;
+		//position:absolute;
+		//bottom:0;
+		//left:0;
+		//right:0;
 		padding:1rem;
 		
 		}
@@ -90,22 +101,5 @@ nav{
 	}
 }
 
-.g1{
-	width:100%;
-}
-.g2{
-	width:50%;
-}
-.g3,.third{
-	float:left;
-	width:33.333%;
-}
-.g4{
-	width:25%;
-}
-.g5{
-	width:20%;
-}
-.g6{
-	width:16.667%;
-}
+
+
