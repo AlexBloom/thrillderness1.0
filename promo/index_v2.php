@@ -32,7 +32,7 @@
 	<section id="question" class="full-screen-container">
 		<section class="frame full-screen-content">	
 			<h1>
-				Has a lack of knowledge ever kept you from an adventure? 
+				Has a lack of information ever kept you from an adventure? 
 			</h1>
 			
 			<a href="#definition" class="button"> Yes </a>
