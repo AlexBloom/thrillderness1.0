@@ -89,6 +89,7 @@ input[type="submit"], .inline-button {
 #main{
 	position:relative;
 }
+<<<<<<< Local Changes
 #quote{
 	width:100%;
 	background-image:url(../img/quote_bg_800.jpg);
@@ -100,6 +101,27 @@ input[type="submit"], .inline-button {
 #intro{
 	//background-color:$green;
 }
+
+#logo{
+	margin-top:5rem;
+	img{
+		width:50%;
+		margin:0 auto;
+	}
+}
+=======
+#quote{
+	width:100%;
+	background-image:url(../img/quote_bg_800.jpg);
+	@include full-bleed-background;
+	figure{
+		background-color:$green-translucent;
+	}
+}
+#intro{
+	//background-color:$green;
+}
+>>>>>>> External Changes
 
 #logo{
 	margin-top:5rem;

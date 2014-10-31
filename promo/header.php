@@ -18,13 +18,6 @@
 </head>
 
 <body id="body">
-		
-	<header id="site-header">
-	
-		<!-- <a id="logo" href="#"> <h1>Thrillderness</h1> </a> -->
-	
-	</header>
-
 
 	<section id="main" class="clearfix">
 	
