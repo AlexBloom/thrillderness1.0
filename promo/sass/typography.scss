@@ -161,6 +161,9 @@
 body{
 	font-family:"adobe-garamond-pro", georgia, times, serif;
 	font-size:80%;
+	@media screen and (min-width:(em(600))){
+		font-size:1em;
+	}
 }
 
 h1, h2, h3{
@@ -229,6 +232,7 @@ figure{
 }
 
 figcaption{
+	font-size:1rem;
 padding:1em 0;
 }
 
