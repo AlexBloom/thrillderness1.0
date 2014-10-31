@@ -12,12 +12,12 @@ $(document).ready(function () {
 	
 		// Size Full-Screen Videos, Images, & Slideshows to window height.
 		$('.full-screen-container').css('min-height',$(window).height());
-		$('#logo-mask').css('padding-top',$(window).height()/5);
+		//$('#logo-mask').css('padding-top',$(window).height()/5);
 		$('#footer-info').css('padding-top',$(window).height()/3);
 
 		$(window).resize(function() {
 			$('.full-screen-container').css('min-height',$(window).height());
-			$('#logo-mask').css('padding-top',$(window).height()/5);
+			//$('#logo-mask').css('padding-top',$(window).height()/5);
 			$('#footer-info').css('padding-top',$(window).height()/3);
 		});
 
